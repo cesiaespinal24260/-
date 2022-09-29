@@ -1,0 +1,19 @@
+# Tendencias e Innovacion en Tecnologia Agricola (TEA)
+def calcularSalario(horas, tarifa):
+    horas_extra = horas - MAX_HORAS_SEMANALES
+    if(horas_extra > 0):
+        pago=(MAX_HORAS_SEMANALES * tarifa) + (horas_extra* (tarifa *1.5))
+    else:
+        pago = horas * tarifa
+    return pago
+
+MAX_HORAS_SEMANALES = 40
+horas = input("Introduzca numero Horas: ")
+tarifa = input ("Introduzca tarifa por hora: ")
+horas_extra = int(horas) - MAX_HORAS_SEMANALES
+if (horas_extra > 0):
+    salario = (MAX_HORAS_SEMANALES * int(tarifa)) + (horas_extra * (int(tarifa) * 1.5))
+else: 
+    salario = int(horas) * int(tarifa)
+print(salario)
+
